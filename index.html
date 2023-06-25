@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Rain cloud</title>
+        <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+        <script src="https://unpkg.com/aframe-spe-particles-component@^1.0.4/dist/aframe-spe-particles-component.min.js"></script>
+    </head>
+
+    <body>
+        <a-assets>
+            <a-asset-item id="cloud-gltf" src="./assets/scene.gltf"></a-asset-item>
+        </a-assets>
+        <a-scene>
+            <a-sky color="#c5d5e8"></a-sky>
+            <a-camera position="0 0 20"></a-camera>
+            <a-entity id="cloud" gltf-model="#cloud-gltf" scale="0.04 0.04 0.04" position="0 0.5 0"></a-entity>
+            <a-entity spe-particles="color: #4c5c6e; position-spread: 10 10 10; radomize-position: true; particle-count: 500; velocity: 0 -50 0;"></a-entity>
+        </a-scene>
+    </body>
+</html>
